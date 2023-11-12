@@ -28,7 +28,7 @@ public class Supplier implements Serializable {
 	@OneToMany(mappedBy="supplier")
 	@JsonIgnore
 	transient Set<Invoice> invoices;
-	@ManyToMany
-	transient Set<ActivitySector> activitySectors;
+	@ManyToMany(mappedBy="suppliers")
+	private Set<ActivitySector> activitySectors;
 
 }
