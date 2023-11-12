@@ -25,10 +25,10 @@ public class Supplier implements Serializable {
 	String label;
 	@Enumerated(EnumType.STRING)
 	SupplierCategory supplierCategory;
-	@OneToMany(mappedBy="supplier")
+	@OneToMany()
 	@JsonIgnore
 	transient Set<Invoice> invoices;
-	@ManyToMany(mappedBy="suppliers")
+	@ManyToMany()
 	private Set<ActivitySector> activitySectors;
 
 }
