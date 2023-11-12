@@ -1,7 +1,9 @@
 package tn.esprit.devops_project.controllers;
 
 import lombok.AllArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.devops_project.entities.dtos.ProductDTO;
 import tn.esprit.devops_project.entities.Product;
 import tn.esprit.devops_project.entities.ProductCategory;
 import tn.esprit.devops_project.services.Iservices.IProductService;
@@ -14,9 +16,11 @@ import java.util.List;
 public class ProductController {
 
     private final IProductService productService;
+    private final ModelMapper modelMapper = new ModelMapper();
 
     @PostMapping("/product/{idStock}")
-    Product addProduct(@RequestBody Product product,@PathVariable Long idStock){
+    Product addProduct(@RequestBody ProductDTO productDTO, @PathVariable Long idStock){
+        Product product=this.modelMapper.map(productDTO, Product.class);
         return productService.addProduct(product,idStock);
     }
 
