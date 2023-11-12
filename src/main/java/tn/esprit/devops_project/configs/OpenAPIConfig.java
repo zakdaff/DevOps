@@ -1,7 +1,6 @@
 package tn.esprit.devops_project.configs;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import org.springdoc.core.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
@@ -18,22 +17,15 @@ public class OpenAPIConfig {
     }
 
     public Info infoAPI() {
-        return new Info().title("\uD83C\uDFBF SKI STATION MANAGEMENT \uD83D\uDEA0")
-                .description("Case Study - SKI STATION")
-                .contact(contactAPI());
-    }
-
-    public Contact contactAPI() {
-        return new Contact().name("TEAM ASI II")
-                .email("ons.bensalah@esprit.tn")
-                .url("https://www.linkedin.com/in/ons-ben-salah-24b73494/");
+        return new Info().title("\uD83C\uDFBF DEVOPS \uD83D\uDEA0")
+                .description("DEVOPS - Project");
     }
 
 
     @Bean
     public GroupedOpenApi productPublicApi() {
         return GroupedOpenApi.builder()
-                .group("SKI STATION Management API")
+                .group("DevOps API")
                 .pathsToMatch("/**/**")
                 .pathsToExclude("**")
                 .build();

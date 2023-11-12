@@ -12,6 +12,7 @@ import org.modelmapper.ModelMapper;
 @CrossOrigin(origins = "*")
 @RestController
 @AllArgsConstructor
+@RequestMapping("/sotck")
 public class StockController {
 
     IStockService stockService;

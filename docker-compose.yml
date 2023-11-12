@@ -1,9 +1,9 @@
 services:
   application:
-    image: imenkhaldi/devops:1.1.0
+    image: imenkhaldi/devops:1.1.2
     restart: always
     ports:
-      - "8089:8089"
+      - "8082:8082"
     depends_on:
       - mysqldb
     environment:
