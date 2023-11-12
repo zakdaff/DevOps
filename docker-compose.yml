@@ -1,7 +1,6 @@
 services:
   application:
     image: imenkhaldi/devops:1.1.2
-    restart: always
     ports:
       - "8082:8082"
     depends_on:
