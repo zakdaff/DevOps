@@ -15,5 +15,5 @@ public interface IActivitySector {
 
     ActivitySector retrieveActivitySector(Long id);
 
-    List<ActivitySector> retreiveActivitySupplier(Long id);
+
 }

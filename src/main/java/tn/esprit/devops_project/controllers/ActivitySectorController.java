@@ -27,10 +27,7 @@ public class ActivitySectorController {
         ActivitySector activitySector = this.modelMapper.map(activitySectorDTO, ActivitySector.class);
         return activitySectorService.addActiviySector(activitySector, idSupplier);
     }
-    @GetMapping("/activitysector/supplier/{id}")
-    List<ActivitySector> retreiveActivitySupplier(@PathVariable Long id){
-        return activitySectorService.retreiveActivitySupplier(id);
-    }
+
 
 
     @DeleteMapping("/activitySector/{id}")

@@ -39,8 +39,5 @@ public class ActivitySectorImpl implements IActivitySector {
 		return activitySectorRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid activitySector Id:" + id));
 	}
 
-	@Override
-	public List<ActivitySector> retreiveActivitySupplier(Long id) {
-		return activitySectorRepository.findByStockIdStock(id);
-	}
+
 }
