@@ -1,5 +1,7 @@
 package tn.esprit.devops_project.services;
 
+
+
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.devops_project.entities.ActivitySector;
@@ -19,7 +21,7 @@ public class ActivitySectorImpl implements IActivitySector {
 	}
 
 	@Override
-	public ActivitySector addActiviySector(ActivitySector activitySector, Long idSupplier) {
+	public ActivitySector addActivitySector(ActivitySector activitySector) {
 		return activitySectorRepository.save(activitySector);
 	}
 

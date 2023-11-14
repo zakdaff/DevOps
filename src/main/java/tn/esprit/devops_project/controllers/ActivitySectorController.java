@@ -22,12 +22,10 @@ public class ActivitySectorController {
         return activitySectorService.retrieveAllActivitySectors();
     }
 
-    @PostMapping("/activitysector/{idSupplier}")
-    ActivitySector addActivitySector(@RequestBody ActivitySectorDTO activitySectorDTO, @PathVariable Long idSupplier){
-        ActivitySector activitySector = this.modelMapper.map(activitySectorDTO, ActivitySector.class);
-        return activitySectorService.addActiviySector(activitySector, idSupplier);
+    @PostMapping("/activitySector")
+    ActivitySector addActivitySector(@RequestBody ActivitySector activitySector){
+        return activitySectorService.addActivitySector(activitySector);
     }
-
 
 
     @DeleteMapping("/activitySector/{id}")

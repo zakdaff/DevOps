@@ -18,7 +18,7 @@ public class ActivitySectorDTO {
      Long idSecteurActivite;
      String codeSecteurActivite;
      String libelleSecteurActivite;
-     Supplier supplierss;
+     Supplier suppliers;
 
 }
 

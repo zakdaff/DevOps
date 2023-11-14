@@ -1,5 +1,7 @@
 package tn.esprit.devops_project;
 
+
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -26,30 +28,25 @@ class ActivitySectorMockTest {
     @Mock
     private ActivitySectorRepository activitySectorRepository;
 
-    @Mock
-    private SupplierRepository supplierRepository;
 
     @InjectMocks
     private ActivitySectorImpl activitySectorService;
 
     @Test
-    void testAddActivitySector() {
-        // Arrange
-        Long supplierId = 1L;
-        Supplier supplier = new Supplier();
-        ActivitySector activitySector = new ActivitySector();
+    public void testAddActivitySector() {
+        // Given
+        ActivitySector activitySectorToAdd = new ActivitySector(/* Add relevant details */);
+        when(activitySectorRepository.save(any(ActivitySector.class))).thenReturn(activitySectorToAdd);
 
-        when(supplierRepository.findById(supplierId)).thenReturn(Optional.of(supplier));
-        when(activitySectorRepository.save(any())).thenReturn(activitySector);
+        // When
+        ActivitySector addedActivitySector = activitySectorService.addActivitySector(activitySectorToAdd);
 
-        // Act
-        ActivitySector result = activitySectorService.addActiviySector(activitySector, supplierId);
-
-        // Assert
-        assertEquals(activitySector, result);
-        verify(supplierRepository, times(1)).findById(supplierId);
-        verify(activitySectorRepository, times(1)).save(activitySector);
+        // Then
+        assertEquals(activitySectorToAdd, addedActivitySector);
+        verify(activitySectorRepository, times(1)).save(any(ActivitySector.class));
     }
+
+
 
     @Test
     void testRetrieveActivitySector() {

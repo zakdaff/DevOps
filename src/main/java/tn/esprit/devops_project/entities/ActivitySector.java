@@ -16,7 +16,7 @@ import java.util.Set;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ActivitySector  implements Serializable {
 
-         /*private static final long serialVersionUID = 1L;*/
+         private static final long serialVersionUID = 1L;
 
 
         @Id
@@ -26,6 +26,6 @@ public class ActivitySector  implements Serializable {
         String libelleSecteurActivite;
         @ManyToMany(mappedBy="activitySectors")
         @JsonIgnore
-        private Set<Supplier> suppliers;
+        private Set<Supplier> supplier;
 
 }
