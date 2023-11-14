@@ -7,7 +7,7 @@ import java.util.List;
 public interface IActivitySector {
     List<ActivitySector> retrieveAllActivitySectors();
 
-    ActivitySector addActivitySector(ActivitySector activitySector);
+    ActivitySector addActiviySector(ActivitySector activitySector, Long idSupplier);
 
     void deleteActivitySector(Long id);
 
