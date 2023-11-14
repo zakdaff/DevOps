@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    metrics_path: '/actuator/metrics'  # Updated to match Spring Boot Actuator endpoint
+    static_configs:
+      - targets: ['localhost:8082']  # Change this to your Spring Boot application's host and port
+
+remote_write:
+  - url: 'http://192.168.56.4:8082'  # Replace with your remote write URL if needed
