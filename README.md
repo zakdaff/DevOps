@@ -65,3 +65,6 @@ For more details on each stage, refer to the relevant documentation in the proje
 ---
 
 Feel free to <img width="1280" alt="pipeline" src="https://github.com/zakdaff/DevOps/assets/74161244/38c5ea37-f706-4344-96c1-8ee51a7c6390">
+# Testing Supplier in Front End Angular
+
+![ezgif com-optimize](https://github.com/zakdaff/DevOps/assets/74161244/584fbb67-5d4e-4b7c-a2e2-e98add9f8ed0)
